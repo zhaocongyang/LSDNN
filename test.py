@@ -92,14 +92,6 @@ def main():
         with torch.no_grad():
             output = model(tensor_in)
 
-        # print("output", output, output.size())
-        # print("decode_seg_map_sequence(torch.max(output[:3], 1)[1].detach().cpu().numpy()) = ", decode_seg_map_sequence(torch.max(output[:3], 1)[1].detach().cpu().numpy())[0].shape )
-        # rgb_image = decode_seg_map_sequence(torch.max(output[:3], 1)[1].detach().cpu().numpy())[0]
-        # save_result2 = args.save_testresult_folder + 'result2_' + image_name + '.jpg'
-        # save_image(rgb_image, save_result2)
-        # print("ss = ", torch.max(output[:3], 1)[1], torch.max(output[:3], 1)[1].size())
-        # print("diyi = ", torch.max(output[:3], 1)[1][0][500])
-
         grid_image = make_grid(decode_seg_map_sequence(torch.max(output[:3], 1)[1].detach().cpu().numpy()), 
                                 3, normalize=False, range=(0, 255))
         print("type(grid) is: ", type(grid_image))
