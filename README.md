@@ -26,10 +26,10 @@ The result of segmentation and extraction dealing with different noises. the inp
 
 ![Results](doc/results.png)
 
-### dataset
+### Dataset
 Dataset we used is made by ourselves. You can download the dataset from [baiduyun](链接:https://pan.baidu.com/s/1FA93B6Gzby5eESHk-RnT_Q  密码:gq6u).
 
-### more result image
+### More result image
 You can download the more result image from [baiduyun](链接:https://pan.baidu.com/s/1iqZaRA9uIqyWa7jJ7Tfh5A  密码:6n4y).
 
 
@@ -72,7 +72,10 @@ Fellow steps below to test your model:
 
 ### demo with single image
 Fellow steps below to run a demo:
-0. To run a demo 
+
+0. Configure your image path 
+
+1. To run a demo 
 
     ```Shell
     CUDA_VISIBLE_DEVICES=0 python single_demo.py
