@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=2 python3 train.py --backbone resnet-18 --lr 0.0070 --workers 4 --epochs 1000 --batch-size 8 --gpu-ids 0 --checkname deeplab-resnet --eval-interval 1 --base-size 513 --crop-size 513 --dataset pascal # 0.006 2
+# --resume '/mnt/hdd1/zcy/Deeplab-run/pascal/deeplab-resnet/experiment_0/checkpoint.pth.tar'
