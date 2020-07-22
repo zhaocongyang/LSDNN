@@ -55,14 +55,16 @@ Fellow steps below to train your model:
 
 0. Configure your dataset path in [mypath.py](https://github.com/zhaocongyang/LSDNN/blob/master/mypath.py).
 
-1. To train deeplabv3+ using Pascal VOC dataset and ResNet as backbone:
+1. To train LSDNN using our dataset and ResNet as backbone:
     ```Shell
     sh train_voc.sh
     ```
 ### Testing
 Fellow steps below to test your model:
 
-You can download model trained by us from [baiduyun](链接:https://pan.baidu.com/s/1h4X0UaKIeff4ZBC1oU1C2A  密码:r3k7).
+0. You can download model trained by us from [baiduyun](链接:https://pan.baidu.com/s/1h4X0UaKIeff4ZBC1oU1C2A  密码:r3k7).
+
+1. To test the model
 
     ```Shell
     CUDA_VISIBLE_DEVICES=0 python test_center_gpu_sensors.py
@@ -70,8 +72,8 @@ You can download model trained by us from [baiduyun](链接:https://pan.baidu.co
 
 ### demo with single image
 Fellow steps below to run a demo:
+0. To run a demo 
 
     ```Shell
     CUDA_VISIBLE_DEVICES=0 python single_demo.py
     ```
-
