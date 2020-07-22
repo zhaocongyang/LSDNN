@@ -63,12 +63,14 @@ Fellow steps below to train your model:
 Fellow steps below to test your model:
 
 You can download model trained by us from [baiduyun](链接:https://pan.baidu.com/s/1h4X0UaKIeff4ZBC1oU1C2A  密码:r3k7).
+
     ```Shell
     CUDA_VISIBLE_DEVICES=0 python test_center_gpu_sensors.py
     ```
 
 ### demo with single image
 Fellow steps below to run a demo:
+
     ```Shell
     CUDA_VISIBLE_DEVICES=0 python single_demo.py
     ```
