@@ -8,18 +8,27 @@
 
 
 
-| Backbone  | train/eval os  |mIoU in val |Pretrained Model|
-| :-------- | :------------: |:---------: |:--------------:|
-| ResNet    | 16/16          | 78.43%     | [google drive](https://drive.google.com/open?id=1NwcwlWqA-0HqAPk3dSNNPipGMF0iS0Zu) |
-| MobileNet | 16/16          | 70.81%     | [google drive](https://drive.google.com/open?id=1G9mWafUAj09P4KvGSRVzIsV_U5OqFLdt) |
-| DRN       | 16/16          | 78.87%     | [google drive](https://drive.google.com/open?id=131gZN_dKEXO79NknIQazPJ-4UmRrZAfI) |
+| Backbone  | train/eval epoch  |mIoU in val |
+| :-------- | :------------: |:---------: |
+| ResNet    | 300            | 74.31%     | 
+| MobileNet | 300            | 70.04%     | 
+| DRN       | 300            | 63.14%     | 
+
 
 
 
 ### Introduction
-This is a PyTorch(0.4.1) implementation of Laser-stripe-detection-neural-network which can eliminate the interference of reflective noise and haze noise and realize the highly robust extraction of laser stripes region.
+This is a PyTorch(1.12.1) implementation of Laser-stripe-detection-neural-network(LSDNN) which can eliminate the interference of reflective noise and haze noise and realize the highly robust extraction of laser stripes region.
+
+![overview](doc/overview.png)
 
 ![Results](doc/results.png)
+
+### dataset
+Dataset we used is made by ourselves. You can download the dataset from [baiduyun](链接:https://pan.baidu.com/s/1FA93B6Gzby5eESHk-RnT_Q  密码:gq6u).
+
+### more result image
+You can download the more result image from [baiduyun](链接:https://pan.baidu.com/s/1iqZaRA9uIqyWa7jJ7Tfh5A  密码:6n4y).
 
 
 ### Installation
@@ -27,8 +36,8 @@ The code was tested with Anaconda and Python 3.6. After installing the Anaconda 
 
 0. Clone the repo:
     ```Shell
-    git clone git@github.com:zhaocongyang/Laser-stripe-detection-neural-network.git
-    cd pytorch-deeplab-xception
+    git clone git@github.com:zhaocongyang/LSDNN.git
+    cd LSDNN
     ```
 
 1. Install dependencies:
@@ -42,33 +51,25 @@ The code was tested with Anaconda and Python 3.6. After installing the Anaconda 
 ### Training
 Fellow steps below to train your model:
 
-0. Configure your dataset path in [mypath.py](https://github.com/jfzhang95/pytorch-deeplab-xception/blob/master/mypath.py).
+0. Configure your dataset path in [mypath.py](https://github.com/zhaocongyang/LSDNN/blob/master/mypath.py).
 
-1. Input arguments: (see full input arguments via python train.py --help):
+1. To train deeplabv3+ using Pascal VOC dataset and ResNet as backbone:
     ```Shell
-    usage: train.py [-h] [--backbone {resnet,xception,drn,mobilenet}]
-                [--out-stride OUT_STRIDE] [--dataset {pascal,coco,cityscapes}]
-                [--use-sbd] [--workers N] [--base-size BASE_SIZE]
-                [--crop-size CROP_SIZE] [--sync-bn SYNC_BN]
-                [--freeze-bn FREEZE_BN] [--loss-type {ce,focal}] [--epochs N]
-                [--start_epoch N] [--batch-size N] [--test-batch-size N]
-                [--use-balanced-weights] [--lr LR]
-                [--lr-scheduler {poly,step,cos}] [--momentum M]
-                [--weight-decay M] [--nesterov] [--no-cuda]
-                [--gpu-ids GPU_IDS] [--seed S] [--resume RESUME]
-                [--checkname CHECKNAME] [--ft] [--eval-interval EVAL_INTERVAL]
-                [--no-val]
+    sh train_voc.sh
+    ```
+### Testing
+Fellow steps below to test your model:
 
+You can download model trained by us from [baiduyun](链接:https://pan.baidu.com/s/1h4X0UaKIeff4ZBC1oU1C2A  密码:r3k7).
+
+    ```shell
+    CUDA_VISIBLE_DEVICES=0 python test_center_gpu_sensors.py
     ```
 
-2. To train deeplabv3+ using Pascal VOC dataset and ResNet as backbone:
-    ```Shell
-    bash train_voc.sh
+### demo with single image
+Fellow steps below to run a demo:
+
+    ```shell
+    CUDA_VISIBLE_DEVICES=0 python single_demo.py
     ```
- 
-### Acknowledgement
-[PyTorch-Encoding](https://github.com/zhanghang1989/PyTorch-Encoding)
 
-[Synchronized-BatchNorm-PyTorch](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch)
-
-[drn](https://github.com/fyu/drn)
