@@ -22,6 +22,8 @@ This is a PyTorch(1.12.1) implementation of Laser-stripe-detection-neural-networ
 
 ![overview](doc/overview.png)
 
+The result of segmentation and extraction dealing with different noises. the input image (1920×1920 pixels). The middle column is the output of our network, where different colors denote different categories. The right column is the result of the center extraction based on the segmentation. The laser stripe’s center is marked as green.
+
 ![Results](doc/results.png)
 
 ### dataset
@@ -62,14 +64,14 @@ Fellow steps below to test your model:
 
 You can download model trained by us from [baiduyun](链接:https://pan.baidu.com/s/1h4X0UaKIeff4ZBC1oU1C2A  密码:r3k7).
 
-    ```shell
+    ```Shell
     CUDA_VISIBLE_DEVICES=0 python test_center_gpu_sensors.py
     ```
 
 ### demo with single image
 Fellow steps below to run a demo:
 
-    ```shell
+    ```Shell
     CUDA_VISIBLE_DEVICES=0 python single_demo.py
     ```
 
