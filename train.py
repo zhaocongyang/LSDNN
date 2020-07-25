@@ -178,7 +178,7 @@ class Trainer(object):
     
 
 def main():
-    parser = argparse.ArgumentParser(description="PyTorch DeeplabV3Plus Training")
+    parser = argparse.ArgumentParser(description="PyTorch LSDNN TRAINING")
     parser.add_argument('--backbone', type=str, default='resnet',
                         choices=['resnet-18', 'resnet-101', 'xception', 'drn', 'mobilenet'],
                         help='backbone name (default: resnet)')

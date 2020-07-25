@@ -10,7 +10,7 @@ from torchvision import transforms
 from dataloaders.utils import  *
 from torchvision.utils import make_grid, save_image
 
-parser = argparse.ArgumentParser(description="PyTorch DeeplabV3Plus Training")
+parser = argparse.ArgumentParser(description="PyTorch LSDNN TESTING")
 parser.add_argument('--in-path', type=str, required=False, default = "./test_img/line6.jpg", help='image to test')
 parser.add_argument('--out-path', type=str, required=False, default = "./test_img/result_line6.jpg", help='mask image to save')
 parser.add_argument('--backbone', type=str, default='resnet',
