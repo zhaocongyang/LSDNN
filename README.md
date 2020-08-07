@@ -29,6 +29,8 @@ The result of segmentation and extraction dealing with different noises. the inp
 ### Dataset
 Dataset we used is made by ourselves. You can download the dataset from [baiduyun](链接:https://pan.baidu.com/s/1FA93B6Gzby5eESHk-RnT_Q  密码:gq6u).
 
+To facilitate downloading, we are publishing part of our dataset. If you need all the data, please contact us at zcy1517@buaa.edu.cn
+
 ### More result image
 You can download the more result image from [baiduyun](链接:https://pan.baidu.com/s/1iqZaRA9uIqyWa7jJ7Tfh5A  密码:6n4y).
 
