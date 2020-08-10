@@ -24,7 +24,10 @@ This is a PyTorch(1.12.1) implementation of Laser-stripe-detection-neural-networ
 
 The result of segmentation and extraction dealing with different noises. the input image (1920×1920 pixels). The middle column is the output of our network, where different colors denote different categories. The right column is the result of the center extraction based on the segmentation. The laser stripe’s center is marked as green.
 
-![Results](doc/results.png)
+![Seg Results](doc/seg_result.jpg)
+
+The result of 3D reconstruction
+![3D reconstruction](doc/pointcloud.jpg)
 
 ### Dataset
 Dataset we used is made by ourselves. You can download the dataset from [baiduyun](链接:https://pan.baidu.com/s/1FA93B6Gzby5eESHk-RnT_Q  密码:gq6u).
