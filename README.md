@@ -14,11 +14,12 @@
 | MobileNet | 300            | 70.04%     | 
 | DRN       | 300            | 63.14%     | 
 
-
-
+### paper
+A Robust Laser Stripe Extraction Method for Structured-Light Vision Sensing
+https://www.mdpi.com/1424-8220/20/16/4544
 
 ### Introduction
-This is a PyTorch(1.12.1) implementation of Laser-stripe-detection-neural-network(LSDNN) which can eliminate the interference of reflective noise and haze noise and realize the highly robust extraction of laser stripes region.
+This is a PyTorch(1.4.0+cu100) implementation of Laser-stripe-detection-neural-network(LSDNN) which can eliminate the interference of reflective noise and haze noise and realize the highly robust extraction of laser stripes region.
 
 ![overview](doc/overview.png)
 
@@ -32,7 +33,6 @@ The result of 3D reconstruction
 ### Dataset
 Dataset we used is made by ourselves. You can download the dataset from [baiduyun](链接:https://pan.baidu.com/s/1FA93B6Gzby5eESHk-RnT_Q  密码:gq6u).
 
-To facilitate downloading, we are publishing part of our dataset. If you need all the data, please contact us at zcy1517@buaa.edu.cn
 
 ### More result image
 You can download the more result image from [baiduyun](链接:https://pan.baidu.com/s/1TWJXz_bkGmUVgUi4qZUCIA  密码:61uo).
